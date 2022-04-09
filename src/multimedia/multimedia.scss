@@ -1,0 +1,21 @@
+@use "../index.scss" as *;
+.mutimediaSection{
+    margin-top: 1rem;
+}
+.multimediaSectionHeader{
+    display: flex;
+    align-items: center;
+    color: $color1;
+    width: 70%;
+    margin: auto;
+    font-size: 1.7rem;
+    svg{
+        font-size: 2rem;
+        margin-right: .5rem;
+    }
+}
+@media screen and (max-width: $mediaThreshold){
+    .multimediaSectionHeader{
+        width: 90%;
+    }
+}

@@ -1,0 +1,38 @@
+@use "../../index.scss" as *;
+.books{
+    padding-block: 2rem;
+    width: fit-content;
+    max-width: 70%;
+    margin: auto;
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+.bookContainer{
+    max-width: clamp(0vw, 100%, 25ch);
+    img{
+        cursor: pointer;
+        width: 100%;
+        aspect-ratio: 4/6;
+        border: 1px solid whitesmoke;
+        &:hover{
+            box-shadow: 0 0 .2rem lightgray;
+            transform: scale(1.02);
+        }
+    }
+}
+@media screen and (max-width: $mediaThreshold){
+    .books{
+        max-width: 90%;
+        grid-template-columns: 1fr 1fr;
+        gap: .7rem;
+    }
+    .bookContainer{
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 120ch){
+    .books{
+        grid-template-columns: repeat(5 1fr);
+    }
+}

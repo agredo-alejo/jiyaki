@@ -1,0 +1,51 @@
+@use "../index.scss" as *;
+
+
+.homePage{
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.chatroomButton{
+    cursor: pointer;
+    position: fixed;
+    bottom: 1rem;
+    right: .5rem;
+    background: $color2;
+    display: grid;
+    border-radius: 50%;
+    padding: .5rem;
+    place-items: center;
+    color: #ddd;
+    box-shadow: 0 0 .2rem $color1;
+    &:hover{
+        transform: scale(1.1);
+        color: white;
+    }
+}
+.chatroom{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 200;
+    border-radius: .3rem;
+    box-shadow: 0 0 .2rem gray;
+ 
+}
+@media screen and (max-width: $mediaThreshold){
+    .chatroom{
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+.homeSection{
+    width: 70%;
+    display: flex;
+    margin: auto;
+    margin-top: 1rem;
+    gap: .5rem;
+}

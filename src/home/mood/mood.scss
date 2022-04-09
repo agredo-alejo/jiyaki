@@ -1,0 +1,59 @@
+@use "../../index.scss" as *;
+$emojiSize: 2rem;
+$expandedEmoji: calc($emojiSize + $emojiSize / 10);
+.emojis{
+    width: 100%;
+    display: flex;
+    margin-top: .5rem;
+}
+.emoji{
+    cursor: pointer;
+    width: $expandedEmoji;
+    height: $expandedEmoji;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .1rem;
+    &:hover{
+        transform: scale(1.05);
+    }
+    img{
+        width: 95%;
+    }
+}
+
+.mood{
+    width: 70%;
+    margin: auto;
+    margin-block: 1rem;
+    background: white;
+    border-radius: .5rem;
+    box-shadow: 0 0 .1rem gray;
+    display: grid;
+    grid-template-columns: .7fr 1fr;
+    &:hover{
+        transform: scale(1.01);
+    }
+}
+.moodText{
+    width: 100%;
+}
+.moodInput{
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+@media screen and (max-width: $mediaThreshold){
+    .moodGraph{
+        min-height: 7rem;
+    }
+
+    .mood{
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+}

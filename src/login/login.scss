@@ -1,0 +1,57 @@
+@use "../index.scss" as *;
+.loginModal{
+
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/jiyaki.appspot.com/o/newback.svg?alt=media&token=8fb50b52-4159-47ad-b619-a72ae6a2d033);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+
+}
+
+.loginBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: .1rem;
+
+    color: white;
+    h1{
+        color: $color1;
+        font-size: 2rem;
+        margin-bottom: .5rem;
+    }
+}
+.loginButtons{
+    width: 100%;
+    display: grid;
+    border-radius: .3rem;
+    grid-template-rows: 2fr;
+    grid-gap: .5rem;
+    button{
+        cursor: pointer;
+        margin: auto;
+        background: $color2;
+        border: none;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: .7rem;
+        font-size: 1rem;
+        border-radius: 5rem;
+        color: white;
+        img{
+            width: 2rem;
+        }
+    
+        svg{
+            font-size: 1.2rem;
+            margin-right: .5rem;
+        }
+        &:hover{
+            transform: scale(1.02);
+        }
+    }
+}

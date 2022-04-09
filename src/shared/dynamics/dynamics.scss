@@ -1,0 +1,37 @@
+@use "../../index.scss" as *;
+.dynamics{
+    padding: 1rem;
+    max-width: 35ch;
+    box-shadow: 0 0 .2rem gray;
+    border-radius: .5rem;
+    overflow: hidden;
+    background: white;
+    color: $color1;
+}
+.dynamicsHeader{
+    display: flex;
+    align-items: center;
+    svg{
+        font-size: 2rem;
+        margin-right: .5rem;
+    }
+}
+.dynamicsBody{
+    padding: .5rem;
+    span{
+        display: flex;
+        width: 100%;
+    }
+    button{
+        cursor: pointer;
+        margin-left: auto;
+        border: none;
+        padding: .5rem;
+        border-radius: 5rem;
+        background: $color1;
+        color: white;
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+}

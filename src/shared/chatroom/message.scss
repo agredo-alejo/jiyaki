@@ -1,0 +1,38 @@
+@use "../../index.scss" as *;
+.message{
+    background: white;
+    position: relative;
+    padding: .7rem;
+    border-radius: .5rem;
+    width: fit-content;
+    margin-bottom: .5rem;
+    display: flex;
+    flex-direction: column;
+    // max-width: 30ch;
+    p{
+        max-width: 30ch;
+        overflow: auto;
+        overflow-wrap: break-word;
+    }
+    
+}
+.chat_timestamp{
+    font-size: .7rem;
+    color: gray;
+    margin-left: .5rem;
+    white-space: nowrap;
+}
+
+.sended{
+    margin-left: auto;
+    // background: #dcf8c6;
+    // background: #d1e2e6;
+    background: hsl(191, 14%, 85%);
+    // color: white;
+}
+.msgName{
+    // position: absolute;
+    // top: -1rem;
+    display: block;
+    font-size: .7rem;
+}

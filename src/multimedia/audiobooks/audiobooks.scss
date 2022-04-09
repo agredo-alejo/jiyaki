@@ -1,0 +1,54 @@
+@use "../../index.scss" as *;
+.audiobooks{
+    padding-block: 2rem;
+    width: fit-content;
+    max-width: 70%;
+    margin: auto;
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.audiobookCard{
+    cursor: pointer;
+    border-radius: .3rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    img{
+        width: 100%;
+    }
+    svg{
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: $color4;
+        border-radius: 50%;
+        border: 3px solid $color4;
+        background: white;
+        margin: .3rem;
+        box-shadow: 0 0 .2rem gray;
+        aspect-ratio: 1/1 !important;
+    }
+    &:hover{
+        transform: scale(1.01);
+        box-shadow: 0 0 .2rem gray;
+    }
+}
+
+@media screen and (max-width: $mediaThreshold){
+    .audiobooks{
+        max-width: 90%;
+        grid-template-columns: 1fr 1fr;
+        gap: .7rem;
+    }
+    .audiobookCard{
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 120ch){
+    .audiobooks{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

@@ -1,0 +1,69 @@
+@use "../../index.scss" as *;
+.emojiPicker{
+    position: fixed;
+    right: 0;
+    bottom: 3rem;
+    overflow: hidden;
+    display: flex;
+}
+.emoji-categories{
+    display: none !important;
+}
+.chatInput{
+    background: $color2;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    padding-inline: .5rem;
+    svg{
+        cursor: pointer;
+        color: #eee;
+        &:hover{
+            color: white;
+        }
+    }
+    &:hover{
+        box-shadow: 0 0 .1rem lightgray;
+    }
+}
+.chatFooter{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid lightgray;
+    background: rgba($color1, 1);
+    position: relative;
+    form{
+        flex:1;
+        display: flex;
+        padding: .5rem;
+    }
+    input{
+        flex: 1;
+        border: none;
+        outline: none;
+        padding-inline: .5rem;
+        background: transparent;
+        color: white;
+        
+    }
+    .chatSendButton{
+        cursor: pointer;
+        aspect-ratio: 1/1;
+        background: $color1;
+        border:none;
+        margin-left: .5rem;
+        border-radius: 50%;
+        width: 2rem;
+        color:white;
+        display: grid;
+        place-items: center;
+        font-size: .9rem;
+        &:hover{
+            background: $color2;
+            svg{
+                transform: scale(1.1);
+            }
+        }
+    }
+}

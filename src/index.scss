@@ -1,0 +1,75 @@
+$mediaThreshold: 700px;
+$boxShadowParams: 0 0 .2rem rgba(gray, .5);
+$beautyBlue: #03a9f4;
+$blue2: rgb(0, 153, 255);
+$buttonPadding: .7rem;
+$buttonSvgSize: 1.5rem;
+$sidebarSize: calc($buttonPadding * 2 + $buttonSvgSize);
+$navbar_li_width: 10rem;
+$sidebarFullSize: calc($sidebarSize + $navbar_li_width);
+$darkBackground: #202020;
+$color1: #4a5a67;
+$color2: #648191;
+$color3: #bac8cb;
+$color4: #ecc0b7;
+$color5: rgb(199, 172, 177);
+$webkitFill: -webkit-fill-available;
+.modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    background: rgba(black, 0.5);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+html, body, #root{
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.flex{
+    display: flex;
+}
+.rgbaGray_05{
+    background: rgba(gray, .05);
+}
+.closeIcon{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.page_nav_margin{
+
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/jiyaki.appspot.com/o/newback.svg?alt=media&token=8fb50b52-4159-47ad-b619-a72ae6a2d033);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+    position: relative;
+    // height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+@media screen and (min-width: $mediaThreshold){
+    .page_nav_margin{
+        margin-left: $sidebarSize;
+        // min-height: -webkit-fill-available;
+        // height: 100vh;
+        height: 100%;
+        // margin-top: 0;
+    }
+}
+@media screen and(max-width: $mediaThreshold){
+    .page_nav_margin{
+        margin-top: $sidebarSize;
+        // height: calc(100vh - $sidebarSize);
+        // height: calc($webkitFill - $sidebarSize);
+        height: calc(100% - $sidebarSize);
+        overflow-y: scroll;
+    }
+}

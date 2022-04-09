@@ -1,0 +1,46 @@
+@use "../../index.scss" as *;
+.activityRecord{
+    width: clamp(0vw, 90%, 45ch);
+    background: white;
+    position: relative;
+    border-radius: .5rem;
+}
+
+.recordInput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $color1;
+    .bigIcon{
+        width: 4rem;
+        aspect-ratio: 1/1;
+        padding: .5rem;
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    span{
+        margin-bottom: .5rem;
+    }
+    button{
+        cursor: pointer;
+        border: none;
+        background: $color1;
+        color: white;
+        padding: .5rem;
+        border-radius: .5rem;
+        padding-inline: 1rem;
+        margin-inline: .1rem;
+    }
+}
+
+.stepsAmt{
+    color: $color1;
+    font-size: 2rem;
+    // text-align: center;
+    display: flex;
+    align-items: center;
+    // align-items: center;
+}

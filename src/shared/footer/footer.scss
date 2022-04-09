@@ -1,0 +1,40 @@
+@use "../../index.scss" as *;
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: $color1;
+    color: #eee;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    a{
+        display: flex;
+    }
+    img{
+        cursor: pointer;
+        width: 2rem;
+        aspect-ratio: 1/1;
+        margin: .2rem;
+        border-radius: 50%;
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+    span{
+        display: flex;
+    }
+    div{
+        padding: 1rem;
+    }
+    h2{
+        font-size: 1.2rem;
+        margin-bottom: .5rem;
+    }
+    p{
+        max-width: 50ch;
+    }
+}
+@media screen and (max-width:$mediaThreshold){
+    .footer{
+        grid-template-columns: 1fr;
+    }
+}

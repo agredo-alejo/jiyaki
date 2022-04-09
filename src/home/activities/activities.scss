@@ -1,0 +1,16 @@
+@use "../../index.scss" as *;
+.activities{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    width: 90%;
+    margin: auto;
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+}
+@media screen and (min-width: $mediaThreshold){
+    .activities{
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 70%;
+    }
+}
